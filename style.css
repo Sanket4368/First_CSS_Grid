@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+main {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+header {
+  display: grid;
+  align-items: center;
+  height: 160px;
+  background-image: url("light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: #030851;
+  font-weight: bolder;
+  font-size: 35px;
+  padding-right: 5px;
+  width: 55%;
+  text-align: center;
+}
+
+#nav_main {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+}
+
+nav {
+  background-color: #91a1be;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul li {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6b5cb;
+  height: 60px;
+  margin-bottom: 4px;
+}
+
+li a {
+  color: white;
+}
+
+h3 {
+  color: #a0b0d9;
+  font-size: 30px;
+}
+
+#panoramic {
+  display: grid;
+  grid-template-columns: 1fr 30vw;
+  gap: 20px;
+  align-items: start;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+footer {
+  background-color: lightblue;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    height: 120px;
+  }
+
+  #nav_main {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    height: 50px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    width: 100vw;
+    margin-top: 0;
+  }
+
+  ul li {
+    display: inline;
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+    background-color: #e6b5cb;
+  }
+
+  #panoramic {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    height: 50vh;
+    width: 43vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+    padding-left: 5px;
+  }
+
+  header {
+    height: 100px;
+    background: linear-gradient(to left,
+        rgba(139, 195, 241, 0.5),
+        rgb(144, 174, 228, 1)),
+      url("light.jpg");
+  }
+
+  nav {
+    background-color: #91a1be;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    margin: 2px;
+    padding: 10px;
+    background-color: #b4c7ea;
+    margin-top: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+}
